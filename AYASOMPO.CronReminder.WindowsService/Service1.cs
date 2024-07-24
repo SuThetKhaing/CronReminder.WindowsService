@@ -23,7 +23,7 @@ namespace AYASOMPO.CronReminder.WindowsService
 
         protected override void OnStart(string[] args)
         {
-            _urls.AddRange(new List<string> { "http://localhost:8086", "http://localhost:8087" });
+            _urls.AddRange(new List<string> { "http://localhost:8086", "http://localhost:8087", "http://localhost:4200" });
             _interval = 10; // Interval in minutes
 
             _timer = new Timer(OnTimedEvent, null, TimeSpan.Zero, TimeSpan.FromMinutes(_interval));
